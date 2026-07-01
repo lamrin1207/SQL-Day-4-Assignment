@@ -1,0 +1,24 @@
+#Day-4 Assignment
+create database college;
+use college;
+create table Students(
+StdId int,
+StdName varchar(20),
+StdSub varchar(15),
+Marks int);
+insert into Students values (1,'Arun','Maths',85),(2,'Priya','Science',88),(2,'Ajay','Maths',75),(4,'Mukesh','Science',83),(5,'Nazar','English',87),(6,'Vijay','CS',85);
+select * from Students;
+select StdSub , sum(Marks) as Total from Students group by StdSub;
+
+#2
+select max(Marks) as Highest_marks, min(Marks) as Lowest_marks, avg(Marks) as Average_marks from Students;
+
+#3
+create table Food(
+FoodItem varchar(20),
+Category varchar(20),
+Price int
+);
+insert into Food values('Biscuit','Snacks',50),('Pizza','Fast Food',230),('Samosa','Snacks',30),('Burger','Fast Food',110),('Ice Cream','Desert',70);
+select * from Food;
+select category, count(*) as Total_items from food where Price < 100 group by Category;
