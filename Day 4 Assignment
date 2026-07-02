@@ -20,5 +20,6 @@ Category varchar(20),
 Price int
 );
 insert into Food values('Biscuit','Snacks',50),('Pizza','Fast Food',230),('Samosa','Snacks',30),('Burger','Fast Food',110),('Ice Cream','Desert',70);
-select * from Food;
+select * from Food where Price < 100;
 select category, count(*) as Total_items from food where Price < 100 group by Category;
+
